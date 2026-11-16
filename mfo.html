@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Займы на карту онлайн | Сравнение выгодных предложений</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+  :root{
+    --bg-main: #F4F7FB;
+    --bg-white: #FFFFFF;
+    --primary: #005BFF;
+    --primary-hover: #0046C7;
+    --accent: #00C853;
+    --accent-hover: #009624;
+    --text-main: #1A1A1A;
+    --text-muted: #666666;
+    --border: #E0E5EC;
+    --radius: 16px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family: 'Inter', sans-serif; color: var(--text-main); background: var(--bg-main); line-height: 1.5;}
+  .container{max-width: 1000px; margin: 0 auto; padding: 0 20px;}
+  
+  /* Шапка */
+  header{background: var(--bg-white); padding: 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100;}
+  header .container{display: flex; justify-content: space-between; align-items: center;}
+  .logo{font-weight: 800; font-size: 22px; color: var(--primary); display: flex; align-items: center; gap: 8px;}
+  .header-phone{font-weight: 600; font-size: 16px;}
+
+  /* Главный экран */
+  .hero{padding: 60px 0 40px; text-align: center;}
+  .hero h1{font-size: clamp(28px, 4vw, 42px); font-weight: 800; margin-bottom: 16px; color: var(--text-main);}
+  .hero h1 span{color: var(--primary);}
+  .hero p{font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto;}
+
+  /* Витрина офферов */
+  .offers-grid{display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 60px;}
+  .offer-card{background: var(--bg-white); border-radius: var(--radius); padding: 30px; border: 2px solid var(--border); transition: 0.2s; display: flex; flex-direction: column; position: relative;}
+  .offer-card:hover{border-color: var(--primary); box-shadow: 0 10px 30px rgba(0,91,255,0.1); transform: translateY(-4px);}
+  .offer-logo{font-size: 26px; font-weight: 800; color: var(--primary); margin-bottom: 10px; text-transform: uppercase;}
+  .offer-title{font-size: 17px; font-weight: 700; margin-bottom: 16px;}
+  .offer-features{list-style: none; margin-bottom: 24px; flex-grow: 1;}
+  .offer-features li{font-size: 14px; margin-bottom: 10px; display: flex; align-items: flex-start; gap: 8px; color: #333;}
+  .offer-features li::before{content: "✓"; color: var(--accent); font-weight: bold;}
+  .offer-conditions{font-size: 12px; color: var(--text-muted); margin-bottom: 20px;}
+  
+  /* Бейджи на карточках */
+  .badge{position: absolute; top: -12px; right: 20px; background: var(--primary); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 20px;}
+  .badge.green{background: var(--accent);}
+  .badge.orange{background: #FF9800;}
+  .badge.purple{background: #9C27B0;}
+  
+  /* Кнопки */
+  .btn{display: block; width: 100%; text-align: center; background: var(--accent); color: #fff; text-decoration: none; padding: 16px; border-radius: 12px; font-weight: 700; font-size: 16px; transition: 0.2s; border: none; cursor: pointer;}
+  .btn:hover{background: var(--accent-hover);}
+  
+  /* Блок "Как это работает" */
+  .steps-section{padding: 60px 0; background: var(--bg-white); border-radius: var(--radius); margin-bottom: 40px; padding: 40px;}
+  .steps-section h2{text-align: center; font-size: 28px; margin-bottom: 40px;}
+  .steps-grid{display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;}
+  .step-item{text-align: center;}
+  .step-icon{width: 60px; height: 60px; background: #E6F0FF; color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 800; margin: 0 auto 16px;}
+  .step-item h3{font-size: 18px; margin-bottom: 8px;}
+  .step-item p{font-size: 14px; color: var(--text-muted);}
+
+  /* Дисклеймер */
+  .disclaimer-box{background: var(--bg-white); border: 2px solid #FFCDD2; background-color: #FFF8F8; padding: 24px; border-radius: var(--radius); font-size: 13px; color: #555; margin-bottom: 40px;}
+  .disclaimer-box strong{color: #D32F2F;}
+  
+  footer{text-align: center; padding: 40px 0; color: var(--text-muted); font-size: 13px;}
+
+  @media(max-width: 768px){
+    .offer-card{padding: 20px;}
+    .steps-section{padding: 30px 20px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">💸 ZaimVitrina</div>
+    <div class="header-phone">Онлайн-заявки 24/7</div>
+  </div>
+</header>
+
+<section class="hero container">
+  <h1>Займы на карту <span>онлайн</span> за 5 минут</h1>
+  <p>Сравните лучшие предложения от микрофинансовых организаций. Первый займ под 0%. Деньги поступают на карту любого банка.</p>
+</section>
+
+<section class="container">
+  <div class="offers-grid">
+    
+    <!-- КАРТОЧКА 1: MoneyMan -->
+    <div class="offer-card" style="border-color: var(--primary);">
+      <div class="badge">Первый займ 0%</div>
+      <div class="offer-logo">MoneyMan</div>
+      <div class="offer-title">Деньги на карту за 10 минут</div>
+      <ul class="offer-features">
+        <li>Сумма: от 1 500 до 100 000 ₽</li>
+        <li>Срок: от 5 дней до 12 месяцев</li>
+        <li>Ставка: от 0% до 0,8% в день</li>
+        <li>Для граждан РФ от 18 до 70 лет</li>
+      </ul>
+      <div class="offer-conditions">
+        *Для новых клиентов. Займ до 15 000 ₽ на срок до 21 дня.
+      </div>
+      <a href="https://t.fincpanetwork.ru/click/32479/101/1?erid=2W5zFGacKGm" class="btn" target="_blank" rel="noopener nofollow">Получить деньги →</a>
+    </div>
+
+    <!-- КАРТОЧКА 2: ВЭББАНКИР -->
+    <div class="offer-card">
+      <div class="badge green">0% до 21 дня</div>
+      <div class="offer-logo" style="color: #FF9800;">ВЭББАНКИР</div>
+      <div class="offer-title">Займ онлайн с 20 лет</div>
+      <ul class="offer-features">
+        <li>Сумма: от 1 000 до 100 000 ₽</li>
+        <li>Срок: от 7 до 365 дней</li>
+        <li>Ставка: 0% на срок до 21 дня (до 30 000 ₽)</li>
+        <li>Без посещения офиса, деньги за 24 часа</li>
+      </ul>
+      <div class="offer-conditions">
+        *Для новых клиентов. ПСК 0,000% - 292,000% годовых.
+      </div>
+      <a href="https://t.fincpanetwork.ru/click/32479/77?erid=2W5zFHR4ffP" class="btn" target="_blank" rel="noopener nofollow">Получить деньги →</a>
+    </div>
+
+    <!-- КАРТОЧКА 3: Bunny Money -->
+    <div class="offer-card">
+      <div class="badge orange">Мобильный займ</div>
+      <div class="offer-logo" style="color: #4CAF50;">Bunny Money</div>
+      <div class="offer-title">Быстрый займ с телефона</div>
+      <ul class="offer-features">
+        <li>Сумма: от 1 000 до 30 000 ₽</li>
+        <li>Срок: от 3 до 30 дней</li>
+        <li>Ставка: от 0 до 0,8% в день</li>
+        <li>Нужны только паспорт, ИНН и СНИЛС</li>
+      </ul>
+      <div class="offer-conditions">
+        *ПСК от 0 до 292% годовых. Условия уточняйте на сайте МФО.
+      </div>
+      <a href="https://t.fincpanetwork.ru/click/32479/968" class="btn" target="_blank" rel="noopener nofollow">Получить деньги →</a>
+    </div>
+
+    <!-- КАРТОЧКА 4: Boostra -->
+    <div class="offer-card">
+      <div class="badge purple">Первый займ 0%</div>
+      <div class="offer-logo" style="color: #9C27B0;">Boostra</div>
+      <div class="offer-title">Онлайн-платформа подбора займов</div>
+      <ul class="offer-features">
+        <li>Сумма: от 1 000 до 15 000 ₽</li>
+        <li>Срок: от 1 до 168 дней</li>
+        <li>Ставка: первый займ 0% на 7 дней</li>
+        <li>Возраст: от 19 до 65 лет</li>
+      </ul>
+      <div class="offer-conditions">
+        *ООО МКК «Финтех-Маркет». Условия уточняйте на сайте МФО.
+      </div>
+      <a href="https://t.fincpanetwork.ru/click/32479/381?erid=2W5zFJDXVqb" class="btn" target="_blank" rel="noopener nofollow">Получить деньги →</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="container steps-section">
+  <h2>Как получить займ?</h2>
+  <div class="steps-grid">
+    <div class="step-item">
+      <div class="step-icon">1</div>
+      <h3>Выберите предложение</h3>
+      <p>Ознакомьтесь с условиями на нашем сайте.</p>
+    </div>
+    <div class="step-item">
+      <div class="step-icon">2</div>
+      <h3>Заполните заявку</h3>
+      <p>Перейдите на сайт МФО и заполните анкету (паспорт и телефон).</p>
+    </div>
+    <div class="step-item">
+      <div class="step-icon">3</div>
+      <h3>Получите деньги</h3>
+      <p>После одобрения деньги моментально придут на вашу карту.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ОБЯЗАТЕЛЬНЫЙ ДИСКЛЕЙМЕР (с реквизитами всех 4 МФО) -->
+<section class="container">
+  <div class="disclaimer-box">
+    <strong>⚠️ Важная информация:</strong><br><br>
+    ООО МФК «Мани Мен». Полная стоимость займа 0-292% годовых. При своевременном погашении первичного займа на сумму от 1500 до 15000 рублей на срок от 5 до 21 дня полная стоимость займа составит 0%. 
+    <br><br>
+    ООО МКК «ВЭББАНКИР». ПСК 0,000% - 292,000% годовых. Сумма займа от 1 000 до 100 000 рублей, срок от 7 до 365 дней. Ставка 0% на срок до 21 дня (до 30 000 рублей).
+    <br><br>
+    ООО МКК «Банни Мани» (Bunny Money). ПСК от 0 до 292% годовых. Сумма займа от 1 000 до 30 000 рублей, срок от 3 до 30 дней. Ставка от 0 до 0,8% в день.
+    <br><br>
+    ООО МКК «Финтех-Маркет» (Boostra). ПСК от 0 до 292% годовых. Сумма займа от 1 000 до 15 000 рублей, срок от 1 до 168 дней. Ставка 0% на 7 дней для новых клиентов.
+    <br><br>
+    <strong>Изучите все условия кредита (займа) на сайте в соответствующем разделе. Оценивайте свои финансовые возможности и риски.</strong>
+    <br><br>
+    Все материалы на данном сайте размещены в информационных целях. Сайт не является финансовой организацией и не выдает займы. 
+    <a href="https://moneyman.ru" target="_blank" rel="noopener nofollow" style="color: var(--primary);">Полные условия займа MoneyMan</a> | 
+    <a href="https://webbankir.com" target="_blank" rel="noopener nofollow" style="color: var(--primary);">Полные условия займа ВЭББАНКИР</a> | 
+    <a href="https://boostra.ru" target="_blank" rel="noopener nofollow" style="color: var(--primary);">Полные условия займа Boostra</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 ZaimVitrina. Сравнение финансовых услуг.
+</footer>
+
+</body>
+</html>
