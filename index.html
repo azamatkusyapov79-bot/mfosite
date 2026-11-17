@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
@@ -40,7 +40,10 @@
   .offers-grid{display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 60px;}
   .offer-card{background: var(--bg-white); border-radius: var(--radius); padding: 30px; border: 2px solid var(--border); transition: 0.2s; display: flex; flex-direction: column; position: relative;}
   .offer-card:hover{border-color: var(--primary); box-shadow: 0 10px 30px rgba(0,91,255,0.1); transform: translateY(-4px);}
-  .offer-logo{font-size: 26px; font-weight: 800; color: var(--primary); margin-bottom: 10px; text-transform: uppercase;}
+  
+  /* Стили для логотипов */
+  .offer-logo-img { height: 40px; margin-bottom: 20px; object-fit: contain; align-self: flex-start; }
+  
   .offer-title{font-size: 17px; font-weight: 700; margin-bottom: 16px;}
   .offer-features{list-style: none; margin-bottom: 24px; flex-grow: 1;}
   .offer-features li{font-size: 14px; margin-bottom: 10px; display: flex; align-items: flex-start; gap: 8px; color: #333;}
@@ -98,7 +101,7 @@
     <!-- КАРТОЧКА 1: MoneyMan -->
     <div class="offer-card" style="border-color: var(--primary);">
       <div class="badge">Первый займ 0%</div>
-      <div class="offer-logo">MoneyMan</div>
+      <img src="moneyman.png" alt="MoneyMan" class="offer-logo-img">
       <div class="offer-title">Деньги на карту за 10 минут</div>
       <ul class="offer-features">
         <li>Сумма: от 1 500 до 100 000 ₽</li>
@@ -115,7 +118,7 @@
     <!-- КАРТОЧКА 2: ВЭББАНКИР -->
     <div class="offer-card">
       <div class="badge green">0% до 21 дня</div>
-      <div class="offer-logo" style="color: #FF9800;">ВЭББАНКИР</div>
+      <img src="webbankir.png" alt="Webbankir" class="offer-logo-img">
       <div class="offer-title">Займ онлайн с 20 лет</div>
       <ul class="offer-features">
         <li>Сумма: от 1 000 до 100 000 ₽</li>
@@ -126,13 +129,13 @@
       <div class="offer-conditions">
         *Для новых клиентов. ПСК 0,000% - 292,000% годовых.
       </div>
-      <a href="https://t.fincpanetwork.ru/click/32479/77?erid=2W5zFHR4ffP" class="btn" target="_blank" rel="noopener nofollow">Получить деньги →</a>
+      <a href="https://t.fincpanetwork.ru/click/32479/77?erid=2W5zFHR4ffP" class="btn" target="_blank" rel="noopener nofollow">Оформить заявку →</a>
     </div>
 
     <!-- КАРТОЧКА 3: Bunny Money -->
     <div class="offer-card">
       <div class="badge orange">Мобильный займ</div>
-      <div class="offer-logo" style="color: #4CAF50;">Bunny Money</div>
+      <img src="bunnymoney.png" alt="Bunny Money" class="offer-logo-img" style="height: 35px; margin-top: 5px;">
       <div class="offer-title">Быстрый займ с телефона</div>
       <ul class="offer-features">
         <li>Сумма: от 1 000 до 30 000 ₽</li>
@@ -143,13 +146,13 @@
       <div class="offer-conditions">
         *ПСК от 0 до 292% годовых. Условия уточняйте на сайте МФО.
       </div>
-      <a href="https://t.fincpanetwork.ru/click/32479/968" class="btn" target="_blank" rel="noopener nofollow">Получить деньги →</a>
+      <a href="https://t.fincpanetwork.ru/click/32479/968" class="btn" target="_blank" rel="noopener nofollow">Получить займ →</a>
     </div>
 
     <!-- КАРТОЧКА 4: Boostra -->
     <div class="offer-card">
       <div class="badge purple">Первый займ 0%</div>
-      <div class="offer-logo" style="color: #9C27B0;">Boostra</div>
+      <img src="boostra.png" alt="Boostra" class="offer-logo-img" style="height: 25px; margin-top: 10px;">
       <div class="offer-title">Онлайн-платформа подбора займов</div>
       <ul class="offer-features">
         <li>Сумма: от 1 000 до 15 000 ₽</li>
@@ -160,7 +163,7 @@
       <div class="offer-conditions">
         *ООО МКК «Финтех-Маркет». Условия уточняйте на сайте МФО.
       </div>
-      <a href="https://t.fincpanetwork.ru/click/32479/381?erid=2W5zFJDXVqb" class="btn" target="_blank" rel="noopener nofollow">Получить деньги →</a>
+      <a href="https://t.fincpanetwork.ru/click/32479/381?erid=2W5zFJDXVqb" class="btn" target="_blank" rel="noopener nofollow">Подобрать займ →</a>
     </div>
 
   </div>
